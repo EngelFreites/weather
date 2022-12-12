@@ -1,0 +1,26 @@
+.info-user{
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.5) ;
+  border-radius: 5px;
+  backdrop-filter: blur(20px);
+  backdrop-filter: flour();
+  justify-self: start;
+  padding: 10px;
+  box-shadow:  2px 2px 25px #8f8f8f,
+  -2px -2px 25px #ffffff;
+}
+
+.info-user p{
+  padding: 0;
+  margin: 0;
+}
+
+
+@media (max-width:800px) {
+  .info-user{
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+ 
+}
+ 

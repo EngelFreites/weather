@@ -1,0 +1,15 @@
+.content-info{
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+
+}
+
+.content-info h3{
+  color: rgb(33, 34, 34);
+  margin: 0;
+}
+
+.content-info p{
+  margin: 0;
+}
