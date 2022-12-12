@@ -1,19 +1,17 @@
 import useGlobalWather from '../../hooks/useGlobalWeather'
 
-
-
-export default function WeatherHours({userHour}){
+export default function WeatherHours ({ userHour }) {
   const weather = useGlobalWather()
 
-  const {hour} = weather.forecastday[0]
+  const { hour } = weather.forecastday[0]
 
-  const restHours = hour.filter( (res, ind) => ind >= userHour)
+  const restHours = hour.filter((res, ind) => ind >= userHour)
 
-  return(
+  return (
     <>
       {
-        restHours.map( res =>(
-          <div>
+        restHours.map(res => (
+          <div key={res.time}>
             <div className='content-day'>
               <h4> {new Date(res.time).getHours()}:00</h4>
 

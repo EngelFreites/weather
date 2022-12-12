@@ -1,14 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from 'react'
 
+const WeatherContext = React.createContext({})
 
-
-const WeatherContext = React.createContext({});
-
-
-export function WeatherUserContext ({children}){
+export function WeatherUserContext ({ children }) {
   const [userWeather, setUserWeather] = useState({})
-  return(
-    <WeatherContext.Provider value={{userWeather, setUserWeather}}>
+  return (
+    <WeatherContext.Provider value={{ userWeather, setUserWeather }}>
       {children}
     </WeatherContext.Provider>
   )

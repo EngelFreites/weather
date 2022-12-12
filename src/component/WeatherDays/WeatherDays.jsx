@@ -1,17 +1,16 @@
-import useGlobalWeather from "../../hooks/useGlobalWeather"
-import getDay from "../../services/getDay"
+import React from 'react'
+import useGlobalWeather from '../../hooks/useGlobalWeather'
+import getDay from '../../services/getDay'
 
-export default function WeatherDays ({userHour}){
-  const {forecastday} = useGlobalWeather()
+export default function WeatherDays ({ userHour }) {
+  const { forecastday } = useGlobalWeather()
 
-  
-
-  return(
+  return (
     <>
     {
-      forecastday.map(climaDay =>(
-        <div className='content-day'>
-          
+      forecastday.map(climaDay => (
+        <div className='content-day' key={climaDay.date}>
+
           <h4>{getDay(climaDay.date)}</h4>
 
           <img src={climaDay.hour[userHour].condition.icon} alt='img'/>

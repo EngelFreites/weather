@@ -1,5 +1,4 @@
-export default function getDay(date){
-
+export default function getDay (date) {
   console.log(date)
   const newDate = new Date(date).getDay()
   console.log(newDate)
